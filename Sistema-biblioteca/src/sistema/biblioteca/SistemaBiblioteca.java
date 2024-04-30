@@ -130,11 +130,13 @@ public class SistemaBiblioteca {
         //Para ver los libros devueltos por Usuarios y Miembros Premium
          System.out.println("Estos son todos los libros devueltos por el usuario:");
          usuario1.devolver_libro("La mala hora");
+         usuario1.devolver_libro("Mansfield Park"); /*Para ver que cuando el miembro premium intenta devolver un libro que no ha tomado prestado*/
          
          System.out.println(" "); //Para espaciar
         
          System.out.println("Estos son todos los libros devueltos por el miembro premium:");
          miembroPremium1.devolver_libro("Persuasión");
+         miembroPremium1.devolver_libro("Mansfield Park"); /*Para ver que cuando el miembro premium intenta devolver un libro que no ha tomado prestado*/
          
         
         System.out.println(" "); //Para espaciar

@@ -62,13 +62,13 @@ public class Usuario {
   
    public void devolver_libro(String nombre){
    boolean libroEncontrado = false;
-      for(Libro libro: Libro.getLista_libros()){
+      for(Libro libro: libros_prestados){
           boolean dispo = libro.getDisponible(); /*hay que crear una variable dónde almacenar la disponibilidad del libro, porque sino en el if no lo coje bien al ser un boolean*/
             if(libro.getTitulo().equals(nombre)){
                 libroEncontrado = true;
                 if(dispo == false){
                     libro.marcar_devuelto();
-                    libros_prestados.add(libro);
+                    libros_prestados.remove(libro);
                     System.out.println("Libro: " + libro.getTitulo()+ " - Disponibilidad del libro cambiada a: " + libro.getDisponible());
                 } else{
                     System.out.println("Libro " + libro.getTitulo()+ " No disponible" );
@@ -77,7 +77,7 @@ public class Usuario {
         }                 
       }
       if(libroEncontrado == false){
-          System.out.println("Libro con título: " + nombre + " no encontrado.");
+          System.out.println("Libro con título: " + nombre + " no encontrado para devolver. ¿Estás seguro que este libro lo has tomado prestado?");
       }
    }
     
