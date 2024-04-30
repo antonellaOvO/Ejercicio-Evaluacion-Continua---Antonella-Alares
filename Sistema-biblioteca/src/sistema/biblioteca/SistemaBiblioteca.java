@@ -165,7 +165,7 @@ public class SistemaBiblioteca {
          
        /* miembroPremium1.reservar_libro2("La mala hora");
         miembroPremium1.reservar_libro2("La mala horaaaaa");
-        miembroPremium1.reservar_libro2("Noches Blancas");*/
+        miembroPremium1.reservar_libro2("Noches Blancas"); ----con la opción 2 descrita en la clase MiembroPremium*/
         
     }
     
