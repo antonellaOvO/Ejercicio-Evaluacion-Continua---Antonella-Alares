@@ -163,7 +163,9 @@ public class SistemaBiblioteca {
             System.out.println("Libro: " + libro.getTitulo()+ " - del autor: " + libro.getAutor() + " - y no está disponible por ahora.");
             }
          
-        
+       /* miembroPremium1.reservar_libro2("La mala hora");
+        miembroPremium1.reservar_libro2("La mala horaaaaa");
+        miembroPremium1.reservar_libro2("Noches Blancas");*/
         
     }
     
