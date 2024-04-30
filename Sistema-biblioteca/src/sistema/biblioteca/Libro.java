@@ -13,19 +13,17 @@ import java.util.*;
  */
 public class Libro {
     private String titulo;
-    private String autor; /*Referencia a Autor*/
+    private String autor; /*Referencia a Autor en la clase Autor cuando crea libro con el método publicar_libro*/
     private boolean disponible;
-    private List<Libro> lista_libros;
+    private static List<Libro> lista_libros = new ArrayList<>();
 
     public Libro(String titulo, String autor, boolean disponible) {
         this.titulo = titulo;
         this.autor = autor;
         this.disponible = disponible;
-        this.lista_libros = new ArrayList<>();
+        lista_libros.add(this); /*Para meter cada libro creado en el listado de todos los libros cada vez que se crea un libro desde Autor*/ 
     }
 
-    
-    
     
     public String getTitulo() {
         return titulo;
@@ -43,7 +41,7 @@ public class Libro {
         this.autor = autor;
     }
 
-    public boolean isDisponible() {
+    public boolean getDisponible() {
         return disponible;
     }
 
@@ -51,7 +49,7 @@ public class Libro {
         this.disponible = disponible;
     }
 
-    public List<Libro> getLista_libros() {
+    public static List<Libro> getLista_libros() {
         return lista_libros;
     }
 
@@ -60,5 +58,12 @@ public class Libro {
     }
     
     
+    public void marcar_prestado() {
+     this.disponible = false;   
+    }
+    
+     public void marcar_devuelto() {
+     this.disponible = true;
+    }
     
 }

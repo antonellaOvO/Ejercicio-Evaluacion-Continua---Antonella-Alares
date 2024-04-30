@@ -36,6 +36,11 @@ public class Autor {
         this.libros = libros;
     }
     
+    public void publicar_libro(String titulo, String autor, boolean disponible){
+        Libro libro = new Libro(titulo, this.nombre, disponible);
+        libros.add(libro);
+    }
+    
  
     
 }
